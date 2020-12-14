@@ -1,10 +1,14 @@
-import isEmail from 'validator/lib/isEmail';
-import add from './add';
+import './styles/main.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log(isEmail('hello@test.com'));
-console.log(add(200, 180));
+const App = () => (
+  <div>
+    <h1>Hello, world!</h1>
+  </div>
+);
 
-document.querySelector('h1').innerText = "Welcome!!"
+ReactDOM.render(<App />, document.getElementById('app'));
 
 if (module.hot) {
   module.hot.accept();
