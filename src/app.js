@@ -1,10 +1,10 @@
-import './styles/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Title from './components/Title';
 
 const App = () => (
   <div>
-    <h1>Hello, world!</h1>
+    <Title text="Hello, everyone!!" />
   </div>
 );
 
