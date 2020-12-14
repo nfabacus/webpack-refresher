@@ -21,7 +21,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.scss$/,  // takes .scss file and apply the below loaders
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
@@ -47,8 +47,8 @@ if (currentTask === 'build') {
   config.module.rules[0].use[0] = minCssExtractPlugin.loader;
   config.plugins.push(
       new minCssExtractPlugin({filename: 'main.[hash].css'}),
-      new CleanWebpackPlugin(),
-      new WebpackManifestPlugin()
+      new CleanWebpackPlugin(),  // clean dist folder before every build
+      new WebpackManifestPlugin() // create manifest.json file
     );
 }
 
